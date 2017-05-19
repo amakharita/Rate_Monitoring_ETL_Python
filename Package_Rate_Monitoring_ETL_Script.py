@@ -6,11 +6,11 @@ import sched
 
 
 #establish MS DB Connection
-cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER=XXX;DATABASE=bapu;UID=XXX;PWD=XXX')
+cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER=XXX;DATABASE=XXX;UID=XXX;PWD=XXX')
 #create Cursor
 cursor = cnxn.cursor()
 #Drop table statement for trunc/reload
-cursor.execute("IF OBJECT_ID('dbo.Package_Rate_Change', 'U') IS NOT NULL DROP TABLE bapu.dbo.Package_Rate_Change;")
+cursor.execute("IF OBJECT_ID('dbo.Package_Rate_Change', 'U') IS NOT NULL DROP TABLE XXX.dbo.Package_Rate_Change;")
 #create table
 cursor.execute('''CREATE TABLE Package_Rate_Change
               (pol_num varchar(20),
